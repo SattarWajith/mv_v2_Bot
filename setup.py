@@ -4,7 +4,7 @@ from pathlib import Path
 import os
 
 # পুরানো dist, build, egg-info ফোল্ডার ডিলিট করা
-for folder in ["dist", "build", "tamilmv_bot.egg-info"]:
+for folder in ["dist", "build", "mv_bot.egg-info"]:
     path = Path(__file__).parent / folder
     if path.exists() and path.is_dir():
         shutil.rmtree(path)
@@ -16,7 +16,7 @@ try:
     with open(readme_path, "r", encoding="utf-8") as f:
         long_description = f.read()
 except FileNotFoundError:
-    long_description = "Telegram bot for downloading from 1Tamilmv Torrent"
+    long_description = "Telegram bot for downloading from mv Torrent"
 
 # requirements.txt ফাইল পড়ার জন্য
 req_path = Path(__file__).parent / "requirements.txt"
@@ -29,14 +29,14 @@ except FileNotFoundError:
 
 # মূল setup
 setup(
-    name="tamilmv-bot",
+    name="mv-bot",
     version="0.2.1",  
-    description="Telegram bot for downloading from 1Tamilmv Torrent magnet link",
+    description="Telegram bot for downloading from mv Torrent magnet link",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="SudoR2spr",
     author_email="wdzoneleech@gmail.com",
-    url="https://github.com/SudoR2spr/1tamilmv_v2_Bot",
+    url="",
     packages=find_packages(),
     install_requires=requirements,
     classifiers=[
@@ -59,10 +59,10 @@ setup(
         "Natural Language :: English",
     ],
     python_requires='>=3.7',
-    keywords="telegram bot 1tamilmv movies torrent magnet link downloader",
+    keywords="telegram bot mv movies torrent magnet link downloader",
     project_urls={
-        "Bug Reports": "https://github.com/SudoR2spr/1tamilmv_v2_Bot/issues",
-        "Source": "https://github.com/SudoR2spr/1tamilmv_v2_Bot",
+        "Bug Reports": "",
+        "Source": "",
     },
     license="MIT",
     platforms=["any"],
