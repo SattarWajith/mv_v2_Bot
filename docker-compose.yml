@@ -1,9 +1,9 @@
 version: '3.9'
 
 services:
-  tamilmv_v2_bot:
+  mv_v2_bot:
     build: .
-    container_name: tamilmv_v2_Bot_container
+    container_name: mv_v2_Bot_container
     ports:
       - "3000:3000"
     env_file:
