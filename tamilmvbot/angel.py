@@ -19,7 +19,7 @@ load_dotenv()
 # ============ WOODctaft =================
 TOKEN = os.getenv('TOKEN')
 WEBHOOK_URL = os.getenv('WEBHOOK_URL')
-TAMILMV_URL = os.getenv('TAMILMV_URL', 'https://www.1tamilmv.boo')
+MV_URL = os.getenv('MV_URL', 'https://www.mv.boo')
 PORT = int(os.getenv('PORT', 3000))
 # ========================================
 bot = telebot.TeleBot(TOKEN, parse_mode='HTML')
@@ -50,7 +50,7 @@ def random_answer(message):
     keyboard.add(
         types.InlineKeyboardButton(
             '🔗 GitHub 🔗',
-            url='https://github.com/SudoR2spr'),
+            url=''),
         types.InlineKeyboardButton(
             text="⚡ Powered By",
             url='https://t.me/Opleech_WD'))
@@ -103,7 +103,7 @@ def makeKeyboard(movie_list):
 
 
 def tamilmv():
-    mainUrl = TAMILMV_URL
+    mainUrl = MV_URL
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
     }
@@ -132,7 +132,7 @@ def tamilmv():
 
         return movie_list, real_dict
     except Exception as e:
-        logger.error(f"Error in tamilmv function: {e}")
+        logger.error(f"Error in mv function: {e}")
         return [], {}
 
 
