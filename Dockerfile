@@ -22,4 +22,4 @@ COPY . .
 EXPOSE 3000
 
 # অ্যাপ রান করুন
-CMD ["python", "-m", "tamilmvbot.angel"]
+CMD ["python", "-m", "mvbot.angel"]
